@@ -4,10 +4,8 @@ import { MoviesService } from './movies.service';
 import { getRepositoryToken } from '@nestjs/typeorm';
 import { Movie } from './entities/movie.entity';
 
-
 describe('MoviesController', () => {
   let controller: MoviesController;
-
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
@@ -27,10 +25,8 @@ describe('MoviesController', () => {
       ],
     }).compile();
 
-
     controller = module.get<MoviesController>(MoviesController);
   });
-
 
   it('should be defined', () => {
     expect(controller).toBeDefined();
